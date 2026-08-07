@@ -1,0 +1,170 @@
+/* public/estilo.css — Estilos compartidos del sistema */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* Barra de navegación */
+nav {
+  background: #1f3a5f;
+  padding: 14px 24px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+nav .marca {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.15rem;
+  margin-right: 18px;
+}
+nav a {
+  color: #d8e1ec;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+nav a:hover, nav a.activo {
+  background: #2c4f7c;
+  color: #fff;
+}
+
+/* Contenedor principal */
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+h1 { font-size: 1.7rem; margin-bottom: 10px; color: #1f3a5f; }
+h2 { font-size: 1.25rem; margin: 22px 0 10px; color: #2c4f7c; }
+p  { margin-bottom: 10px; }
+
+/* Tarjetas / secciones */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+/* Formularios */
+form .campo { margin-bottom: 12px; }
+form label  { display: block; font-weight: 600; margin-bottom: 4px; font-size: 0.95rem; }
+form input[type=text],
+form input[type=number],
+form input[type=tel],
+form input[type=date],
+form select,
+form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccd2d9;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+form input:focus, form select:focus {
+  outline: none;
+  border-color: #1f3a5f;
+  box-shadow: 0 0 0 2px rgba(31,58,95,0.15);
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 6px;
+}
+.btn-primario   { background: #1f3a5f; color: #fff; }
+.btn-primario:hover { background: #2c4f7c; }
+.btn-secundario { background: #e6e9ee; color: #222; }
+.btn-secundario:hover { background: #d1d6dd; }
+.btn-peligro    { background: #c0392b; color: #fff; }
+.btn-peligro:hover { background: #9c2c20; }
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+table th, table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e6e9ee;
+  font-size: 0.95rem;
+}
+table th {
+  background: #f0f3f7;
+  color: #1f3a5f;
+  font-weight: 600;
+}
+table tr:hover td { background: #fafbfc; }
+
+/* Mensajes (alerts) */
+.msg {
+  padding: 10px 14px;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+.msg-ok    { background: #d6f0db; color: #1d6a32; border: 1px solid #a4d8b1; }
+.msg-error { background: #f8d3d0; color: #842029; border: 1px solid #e9a7a3; }
+
+/* Tabs / filtros */
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 14px;
+  border-bottom: 2px solid #e6e9ee;
+}
+.tabs a {
+  padding: 8px 14px;
+  text-decoration: none;
+  color: #555;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+}
+.tabs a.activo {
+  color: #1f3a5f;
+  border-bottom-color: #1f3a5f;
+  font-weight: 600;
+}
+
+/* Etiquetas (badges) */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.badge-si { background: #d6f0db; color: #1d6a32; }
+.badge-no { background: #f8d3d0; color: #842029; }
+
+/* Layout en dos columnas para formulario + lista */
+.split { display: grid; grid-template-columns: 1fr 1.4fr; gap: 22px; }
+@media (max-width: 800px) { .split { grid-template-columns: 1fr; } }
+
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6c757d;
+  padding: 30px 10px 20px;
+}

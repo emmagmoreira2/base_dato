@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1100" font-family="Segoe UI, Tahoma, sans-serif">
+  <rect width="1000" height="1100" fill="#f4f6f8"/>
+
+  <text x="500" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1f3a5f">
+    Wireframe de la interfaz
+  </text>
+  <text x="500" y="56" text-anchor="middle" font-size="13" fill="#555">
+    Tres vistas (views) principales del sistema
+  </text>
+
+  <!-- ==================== Vista 1: Inicio ==================== -->
+  <g transform="translate(30, 90)">
+    <text x="0" y="0" font-size="15" font-weight="bold" fill="#1f3a5f">Vista 1 — index.php (Inicio / Instrucciones)</text>
+
+    <rect x="0" y="14" width="940" height="280" fill="#fff" stroke="#888" stroke-width="1.5" rx="4"/>
+
+    <!-- Nav -->
+    <rect x="0" y="14" width="940" height="36" fill="#1f3a5f" rx="4"/>
+    <text x="14" y="38" fill="#fff" font-size="13" font-weight="bold">🏠 Alquileres UPR</text>
+    <text x="180" y="38" fill="#fff" font-size="12" font-weight="bold">Inicio</text>
+    <text x="240" y="38" fill="#d8e1ec" font-size="12">Propiedades</text>
+    <text x="324" y="38" fill="#d8e1ec" font-size="12">Tenants</text>
+    <text x="386" y="38" fill="#d8e1ec" font-size="12">Contratos</text>
+    <text x="460" y="38" fill="#d8e1ec" font-size="12">Reporte</text>
+
+    <!-- Contenido -->
+    <text x="20" y="80" font-size="16" font-weight="bold" fill="#1f3a5f">
+      Sistema de Manejo de Propiedades y Alquileres
+    </text>
+    <rect x="20" y="92" width="900" height="40" fill="#e9eef5" rx="3"/>
+    <text x="30" y="106" font-size="11" fill="#555">Descripción del propósito de la aplicación. Explica qué hace y</text>
+    <text x="30" y="120" font-size="11" fill="#555">para quién está pensada.</text>
+
+    <text x="20" y="150" font-size="14" font-weight="bold" fill="#2c4f7c">¿Cómo se usa el sistema?</text>
+    <rect x="20" y="156" width="900" height="120" fill="#fff" stroke="#ccd2d9" rx="3"/>
+    <text x="35" y="174" font-size="11" fill="#222">1. Propiedades — añadir, editar y eliminar.</text>
+    <text x="35" y="190" font-size="11" fill="#222">2. Tenants — registrar inquilinos.</text>
+    <text x="35" y="206" font-size="11" fill="#222">3. Contratos — conectar tenant con propiedad.</text>
+    <text x="35" y="222" font-size="11" fill="#222">4. Reporte — listados con SELECT.</text>
+    <text x="35" y="252" font-size="11" font-style="italic" fill="#777">(Resumen de entidades y relaciones del modelo de datos)</text>
+  </g>
+
+  <!-- ==================== Vista 2: Propiedades (manipula datos) ==================== -->
+  <g transform="translate(30, 400)">
+    <text x="0" y="0" font-size="15" font-weight="bold" fill="#1f3a5f">
+      Vista 2 — propiedades.php (manipula datos: INSERT, UPDATE, DELETE)
+    </text>
+
+    <rect x="0" y="14" width="940" height="330" fill="#fff" stroke="#888" stroke-width="1.5" rx="4"/>
+
+    <!-- Nav -->
+    <rect x="0" y="14" width="940" height="36" fill="#1f3a5f" rx="4"/>
+    <text x="14" y="38" fill="#fff" font-size="13" font-weight="bold">🏠 Alquileres UPR</text>
+    <text x="180" y="38" fill="#d8e1ec" font-size="12">Inicio</text>
+    <text x="240" y="38" fill="#fff" font-size="12" font-weight="bold">Propiedades</text>
+    <text x="324" y="38" fill="#d8e1ec" font-size="12">Tenants</text>
+    <text x="386" y="38" fill="#d8e1ec" font-size="12">Contratos</text>
+    <text x="460" y="38" fill="#d8e1ec" font-size="12">Reporte</text>
+
+    <text x="20" y="80" font-size="16" font-weight="bold" fill="#1f3a5f">Gestión de Propiedades</text>
+
+    <!-- Columna izquierda: formulario -->
+    <rect x="20" y="100" width="320" height="220" fill="#fafbfc" stroke="#ccd2d9" rx="4"/>
+    <text x="35" y="120" font-size="13" font-weight="bold" fill="#2c4f7c">Añadir nueva propiedad</text>
+
+    <text x="35" y="148" font-size="11" fill="#222">Dirección</text>
+    <rect x="35" y="154" width="280" height="22" fill="#fff" stroke="#ccd2d9"/>
+
+    <text x="35" y="190" font-size="11" fill="#222">Precio de alquiler ($)</text>
+    <rect x="35" y="196" width="280" height="22" fill="#fff" stroke="#ccd2d9"/>
+
+    <text x="35" y="232" font-size="11" fill="#222">Cuartos</text>
+    <rect x="35" y="238" width="280" height="22" fill="#fff" stroke="#ccd2d9"/>
+
+    <text x="35" y="278" font-size="11" fill="#222">☑ Disponible</text>
+
+    <rect x="35" y="290" width="120" height="22" fill="#1f3a5f" rx="3"/>
+    <text x="95" y="305" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">Añadir</text>
+
+    <!-- Columna derecha: tabla -->
+    <rect x="360" y="100" width="560" height="220" fill="#fafbfc" stroke="#ccd2d9" rx="4"/>
+    <text x="375" y="120" font-size="13" font-weight="bold" fill="#2c4f7c">Listado de propiedades</text>
+
+    <!-- Encabezados -->
+    <rect x="375" y="132" width="530" height="22" fill="#f0f3f7"/>
+    <text x="383" y="147" font-size="10" font-weight="bold" fill="#1f3a5f">ID</text>
+    <text x="410" y="147" font-size="10" font-weight="bold" fill="#1f3a5f">DIRECCIÓN</text>
+    <text x="570" y="147" font-size="10" font-weight="bold" fill="#1f3a5f">PRECIO</text>
+    <text x="625" y="147" font-size="10" font-weight="bold" fill="#1f3a5f">CTOS</text>
+    <text x="660" y="147" font-size="10" font-weight="bold" fill="#1f3a5f">DISP</text>
+    <text x="710" y="147" font-size="10" font-weight="bold" fill="#1f3a5f">ACCIONES</text>
+
+    <!-- Filas de ejemplo -->
+    <line x1="375" y1="170" x2="905" y2="170" stroke="#e6e9ee"/>
+    <text x="383" y="184" font-size="10" fill="#222">1</text>
+    <text x="410" y="184" font-size="10" fill="#222">Calle Loíza 1234</text>
+    <text x="570" y="184" font-size="10" fill="#222">$950</text>
+    <text x="625" y="184" font-size="10" fill="#222">2</text>
+    <text x="660" y="184" font-size="10" fill="#27ae60" font-weight="bold">Sí</text>
+    <rect x="708" y="172" width="50" height="18" fill="#e6e9ee" rx="2"/>
+    <text x="733" y="184" text-anchor="middle" font-size="9" fill="#222">Editar</text>
+    <rect x="763" y="172" width="60" height="18" fill="#c0392b" rx="2"/>
+    <text x="793" y="184" text-anchor="middle" font-size="9" fill="#fff">Eliminar</text>
+
+    <line x1="375" y1="200" x2="905" y2="200" stroke="#e6e9ee"/>
+    <text x="383" y="214" font-size="10" fill="#222">2</text>
+    <text x="410" y="214" font-size="10" fill="#222">Ave. Ponce de León 50</text>
+    <text x="570" y="214" font-size="10" fill="#222">$1,250</text>
+    <text x="625" y="214" font-size="10" fill="#222">3</text>
+    <text x="660" y="214" font-size="10" fill="#27ae60" font-weight="bold">Sí</text>
+    <rect x="708" y="202" width="50" height="18" fill="#e6e9ee" rx="2"/>
+    <text x="733" y="214" text-anchor="middle" font-size="9" fill="#222">Editar</text>
+    <rect x="763" y="202" width="60" height="18" fill="#c0392b" rx="2"/>
+    <text x="793" y="214" text-anchor="middle" font-size="9" fill="#fff">Eliminar</text>
+
+    <line x1="375" y1="230" x2="905" y2="230" stroke="#e6e9ee"/>
+    <text x="383" y="244" font-size="10" fill="#222">3</text>
+    <text x="410" y="244" font-size="10" fill="#222">Calle Cerra 88</text>
+    <text x="570" y="244" font-size="10" fill="#222">$750</text>
+    <text x="625" y="244" font-size="10" fill="#222">1</text>
+    <text x="660" y="244" font-size="10" fill="#c0392b" font-weight="bold">No</text>
+    <rect x="708" y="232" width="50" height="18" fill="#e6e9ee" rx="2"/>
+    <text x="733" y="244" text-anchor="middle" font-size="9" fill="#222">Editar</text>
+    <rect x="763" y="232" width="60" height="18" fill="#c0392b" rx="2"/>
+    <text x="793" y="244" text-anchor="middle" font-size="9" fill="#fff">Eliminar</text>
+  </g>
+
+  <!-- ==================== Vista 3: Reporte (muestra datos) ==================== -->
+  <g transform="translate(30, 760)">
+    <text x="0" y="0" font-size="15" font-weight="bold" fill="#1f3a5f">
+      Vista 3 — reporte.php (muestra datos seleccionados con SELECT)
+    </text>
+
+    <rect x="0" y="14" width="940" height="310" fill="#fff" stroke="#888" stroke-width="1.5" rx="4"/>
+
+    <!-- Nav -->
+    <rect x="0" y="14" width="940" height="36" fill="#1f3a5f" rx="4"/>
+    <text x="14" y="38" fill="#fff" font-size="13" font-weight="bold">🏠 Alquileres UPR</text>
+    <text x="180" y="38" fill="#d8e1ec" font-size="12">Inicio</text>
+    <text x="240" y="38" fill="#d8e1ec" font-size="12">Propiedades</text>
+    <text x="324" y="38" fill="#d8e1ec" font-size="12">Tenants</text>
+    <text x="386" y="38" fill="#d8e1ec" font-size="12">Contratos</text>
+    <text x="460" y="38" fill="#fff" font-size="12" font-weight="bold">Reporte</text>
+
+    <text x="20" y="80" font-size="16" font-weight="bold" fill="#1f3a5f">Reporte</text>
+
+    <!-- Tabs -->
+    <line x1="20" y1="120" x2="920" y2="120" stroke="#e6e9ee" stroke-width="2"/>
+    <text x="30" y="112" font-size="12" font-weight="bold" fill="#1f3a5f">Propiedades disponibles</text>
+    <line x1="20" y1="120" x2="180" y2="120" stroke="#1f3a5f" stroke-width="3"/>
+    <text x="210" y="112" font-size="12" fill="#777">Tenants</text>
+    <text x="290" y="112" font-size="12" fill="#777">Contratos activos</text>
+
+    <!-- Tabla -->
+    <rect x="20" y="140" width="900" height="160" fill="#fafbfc" stroke="#ccd2d9" rx="4"/>
+    <text x="30" y="160" font-size="13" font-weight="bold" fill="#2c4f7c">Propiedades disponibles (3)</text>
+
+    <rect x="30" y="170" width="880" height="22" fill="#f0f3f7"/>
+    <text x="40"  y="186" font-size="10" font-weight="bold" fill="#1f3a5f">ID</text>
+    <text x="80"  y="186" font-size="10" font-weight="bold" fill="#1f3a5f">DIRECCIÓN</text>
+    <text x="500" y="186" font-size="10" font-weight="bold" fill="#1f3a5f">PRECIO</text>
+    <text x="700" y="186" font-size="10" font-weight="bold" fill="#1f3a5f">CUARTOS</text>
+
+    <line x1="30" y1="200" x2="910" y2="200" stroke="#e6e9ee"/>
+    <text x="40"  y="214" font-size="10" fill="#222">1</text>
+    <text x="80"  y="214" font-size="10" fill="#222">Calle Loíza 1234, San Juan, PR</text>
+    <text x="500" y="214" font-size="10" fill="#222">$950.00</text>
+    <text x="700" y="214" font-size="10" fill="#222">2</text>
+
+    <line x1="30" y1="230" x2="910" y2="230" stroke="#e6e9ee"/>
+    <text x="40"  y="244" font-size="10" fill="#222">2</text>
+    <text x="80"  y="244" font-size="10" fill="#222">Ave. Ponce de León 50, Hato Rey</text>
+    <text x="500" y="244" font-size="10" fill="#222">$1,250.00</text>
+    <text x="700" y="244" font-size="10" fill="#222">3</text>
+
+    <line x1="30" y1="260" x2="910" y2="260" stroke="#e6e9ee"/>
+    <text x="40"  y="274" font-size="10" fill="#222">4</text>
+    <text x="80"  y="274" font-size="10" fill="#222">Calle Sol 21, Viejo San Juan</text>
+    <text x="500" y="274" font-size="10" fill="#222">$1,500.00</text>
+    <text x="700" y="274" font-size="10" fill="#222">2</text>
+  </g>
+
+  <text x="500" y="1080" text-anchor="middle" font-size="11" font-style="italic" fill="#666">
+    Total: 3 vistas (la mínima exigida) + tabs adicionales en el reporte para diferentes consultas SELECT.
+  </text>
+</svg>
